@@ -1,0 +1,383 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Brand Theme (60% Green / 40% Blue) */
+  --primary-green: #00A651;
+  --deep-blue: #003399;
+  --accent-blue: #0b2d8f;
+  --accent-green: #00914a;
+
+  /* App semantic palette */
+  --primary-color: var(--deep-blue);
+  --secondary-color: var(--primary-green);
+
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --text-muted: #6c757d;
+
+  --bg-white: #ffffff;
+  --bg-light: #f8f9fa;
+  --bg-page: #f4fbf7;
+  /* Very light gray for section separation */
+  --bg-dark: #212529;
+
+  /* Typography */
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+  font-family: var(--font-family);
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light;
+  /* Force light mode base */
+  color: var(--text-dark);
+  background-color: var(--bg-page);
+
+  /* Bootstrap theme tokens */
+  --bs-primary: var(--deep-blue);
+  --bs-primary-rgb: 0, 51, 153;
+  --bs-success: var(--primary-green);
+  --bs-success-rgb: 0, 166, 81;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Background pattern library (data-uri SVG) */
+  --pattern-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+  --pattern-dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='%23003399' fill-opacity='0.12'%3E%3Ccircle cx='10' cy='10' r='1.6'/%3E%3Ccircle cx='42' cy='18' r='1.4'/%3E%3Ccircle cx='22' cy='46' r='1.5'/%3E%3Ccircle cx='54' cy='52' r='1.2'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-blueprint: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23003399' stroke-opacity='0.09'%3E%3Cpath d='M0 0H120V120H0Z'/%3E%3Cpath d='M40 0V120M80 0V120M0 40H120M0 80H120'/%3E%3Cpath d='M20 0V120M60 0V120M100 0V120M0 20H120M0 60H120M0 100H120' stroke-opacity='0.05'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-topo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%2300A651' stroke-opacity='0.11' stroke-width='2'%3E%3Cpath d='M0 38 C 40 10, 80 66, 120 38 S 200 66, 240 38'/%3E%3Cpath d='M0 86 C 44 58, 88 114, 132 86 S 208 114, 240 86'/%3E%3Cpath d='M0 134 C 40 106, 80 162, 120 134 S 200 162, 240 134'/%3E%3Cpath d='M0 182 C 44 154, 88 210, 132 182 S 208 210, 240 182'/%3E%3C/g%3E%3Cg fill='none' stroke='%23003399' stroke-opacity='0.08' stroke-width='2'%3E%3Cpath d='M0 62 C 40 34, 80 90, 120 62 S 200 90, 240 62'/%3E%3Cpath d='M0 158 C 44 130, 88 186, 132 158 S 208 186, 240 158'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-circuit: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='none' stroke='%23003399' stroke-opacity='0.09' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M18 36H86V18H162'/%3E%3Cpath d='M18 108H66V84H126V126H162'/%3E%3Cpath d='M18 156H74V140H106V156H162'/%3E%3C/g%3E%3Cg fill='%2300A651' fill-opacity='0.14'%3E%3Ccircle cx='86' cy='36' r='3.4'/%3E%3Ccircle cx='66' cy='108' r='3.0'/%3E%3Ccircle cx='126' cy='84' r='3.2'/%3E%3Ccircle cx='106' cy='140' r='3.0'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-confetti: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill-opacity='0.12'%3E%3Cpath d='M18 28l10 6-6 10-10-6z' fill='%23003399'/%3E%3Cpath d='M102 22l12 4-4 12-12-4z' fill='%2300A651'/%3E%3Ccircle cx='38' cy='96' r='5' fill='%23003399'/%3E%3Ccircle cx='112' cy='92' r='4' fill='%2300A651'/%3E%3Cpath d='M70 64l8 8-8 8-8-8z' fill='%23003399'/%3E%3Cpath d='M20 126l14-6 6 14-14 6z' fill='%2300A651'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+
+  /* Background tokens (overridden per page type) */
+  --bg-base: #eefcf5;
+  --bg-a: rgba(0, 166, 81, 0.20);
+  --bg-b: rgba(0, 51, 153, 0.16);
+  --bg-c: rgba(255, 255, 255, 0.45);
+  --bg-pattern: var(--pattern-grain);
+  --bg-pattern-size: 240px 240px;
+  --bg-aurora-opacity: 0.75;
+  --bg-aurora-blur: 90px;
+  --bg-aurora-motion: 1;
+}
+
+/* Full-app background layers (completely new look: texture + aurora) */
+#root {
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+}
+
+#root::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-color: var(--bg-base);
+  background-image:
+    radial-gradient(1400px 900px at 16% 12%, var(--bg-a), transparent 62%),
+    radial-gradient(1200px 860px at 84% 18%, var(--bg-b), transparent 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.18) 45%, rgba(255, 255, 255, 0.08) 100%),
+    var(--bg-pattern);
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  background-size: auto, auto, auto, var(--bg-pattern-size);
+  background-position: center, center, center, 0 0;
+}
+
+#root::after {
+  content: '';
+  position: fixed;
+  inset: -18% -18% -18% -18%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: var(--bg-aurora-opacity);
+  filter: blur(var(--bg-aurora-blur));
+  transform: translate3d(0, 0, 0) scale(1.05);
+  mix-blend-mode: soft-light;
+  background:
+    conic-gradient(from 210deg at 40% 40%, rgba(0, 166, 81, 0.55), transparent 25%, rgba(0, 51, 153, 0.45), transparent 58%, rgba(0, 166, 81, 0.50));
+  animation: bgFloat 18s ease-in-out infinite;
+}
+
+@keyframes bgFloat {
+  0% {
+    transform: translate3d(-2%, -1%, 0) scale(1.06);
+  }
+  50% {
+    transform: translate3d(2%, 1.5%, 0) scale(1.04);
+  }
+  100% {
+    transform: translate3d(-2%, -1%, 0) scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root::after {
+    animation: none;
+  }
+}
+
+/* Page-aware background themes (set via PageBackground.jsx) */
+body[data-page='home'] {
+  --bg-base: #eafff3;
+  --bg-a: rgba(0, 166, 81, 0.26);
+  --bg-b: rgba(0, 51, 153, 0.18);
+  --bg-pattern: var(--pattern-grain);
+  --bg-pattern-size: 240px 240px;
+  --bg-aurora-opacity: 0.82;
+  --bg-aurora-blur: 95px;
+}
+
+body[data-page='about'] {
+  --bg-base: #f3fff8;
+  --bg-a: rgba(0, 166, 81, 0.16);
+  --bg-b: rgba(0, 51, 153, 0.12);
+  --bg-pattern: var(--pattern-topo);
+  --bg-pattern-size: 240px 240px;
+  --bg-aurora-opacity: 0.60;
+  --bg-aurora-blur: 105px;
+}
+
+body[data-page='leadership'] {
+  --bg-base: #effaf6;
+  --bg-a: rgba(0, 166, 81, 0.18);
+  --bg-b: rgba(0, 51, 153, 0.15);
+  --bg-pattern: var(--pattern-dots);
+  --bg-pattern-size: 64px 64px;
+  --bg-aurora-opacity: 0.72;
+  --bg-aurora-blur: 110px;
+}
+
+body[data-page='implementation'] {
+  --bg-base: #f0fbff;
+  --bg-a: rgba(0, 51, 153, 0.18);
+  --bg-b: rgba(0, 166, 81, 0.13);
+  --bg-pattern: var(--pattern-blueprint);
+  --bg-pattern-size: 120px 120px;
+  --bg-aurora-opacity: 0.68;
+  --bg-aurora-blur: 100px;
+}
+
+body[data-page='equipments'] {
+  --bg-base: #f2fff9;
+  --bg-a: rgba(0, 166, 81, 0.16);
+  --bg-b: rgba(0, 51, 153, 0.14);
+  --bg-pattern: var(--pattern-circuit);
+  --bg-pattern-size: 180px 180px;
+  --bg-aurora-opacity: 0.66;
+  --bg-aurora-blur: 110px;
+}
+
+body[data-page='events'] {
+  --bg-base: #f0fff6;
+  --bg-a: rgba(0, 166, 81, 0.20);
+  --bg-b: rgba(0, 51, 153, 0.14);
+  --bg-pattern: var(--pattern-confetti);
+  --bg-pattern-size: 140px 140px;
+  --bg-aurora-opacity: 0.78;
+  --bg-aurora-blur: 95px;
+}
+
+body[data-page='events'][data-section='conference'] {
+  --bg-base: #f3fbff;
+  --bg-a: rgba(0, 51, 153, 0.18);
+  --bg-b: rgba(0, 166, 81, 0.10);
+  --bg-aurora-opacity: 0.70;
+}
+
+/* Page-aware backgrounds (set via PageBackground.jsx) */
+body[data-page='home'] {
+  background-image:
+    radial-gradient(1200px circle at 18% 12%, rgba(0, 166, 81, 0.18), transparent 52%),
+    radial-gradient(900px circle at 82% 18%, rgba(0, 51, 153, 0.12), transparent 55%),
+    radial-gradient(900px circle at 30% 92%, rgba(0, 166, 81, 0.12), transparent 58%),
+    linear-gradient(135deg, rgba(0, 166, 81, 0.08) 0%, rgba(0, 51, 153, 0.06) 45%, rgba(0, 166, 81, 0.09) 100%),
+    repeating-linear-gradient(45deg, rgba(0, 51, 153, 0.035) 0px, rgba(0, 51, 153, 0.035) 1px, transparent 1px, transparent 14px);
+}
+
+/* About: calm “document / campus” texture */
+body[data-page='about'] {
+  background-image:
+    radial-gradient(1100px circle at 20% 14%, rgba(0, 51, 153, 0.10), transparent 55%),
+    radial-gradient(1100px circle at 78% 22%, rgba(0, 166, 81, 0.12), transparent 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.05) 40%, rgba(0, 166, 81, 0.035) 100%),
+    repeating-linear-gradient(0deg, rgba(0, 51, 153, 0.035) 0px, rgba(0, 51, 153, 0.035) 1px, transparent 1px, transparent 18px),
+    repeating-linear-gradient(90deg, rgba(0, 166, 81, 0.03) 0px, rgba(0, 166, 81, 0.03) 1px, transparent 1px, transparent 18px);
+}
+
+/* Leadership: subtle spotlight feel */
+body[data-page='leadership'] {
+  background-image:
+    radial-gradient(700px circle at 22% 18%, rgba(0, 166, 81, 0.16), transparent 60%),
+    radial-gradient(600px circle at 76% 16%, rgba(0, 51, 153, 0.14), transparent 62%),
+    radial-gradient(900px circle at 50% 100%, rgba(0, 166, 81, 0.10), transparent 60%),
+    linear-gradient(135deg, rgba(0, 51, 153, 0.05) 0%, rgba(0, 166, 81, 0.06) 55%, rgba(255, 255, 255, 0.20) 100%),
+    radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.00) 55%);
+}
+
+/* Implementation: forward-motion diagonals */
+body[data-page='implementation'] {
+  background-image:
+    radial-gradient(1000px circle at 15% 18%, rgba(0, 166, 81, 0.12), transparent 60%),
+    radial-gradient(1000px circle at 85% 22%, rgba(0, 51, 153, 0.10), transparent 60%),
+    linear-gradient(135deg, rgba(0, 166, 81, 0.06) 0%, rgba(0, 51, 153, 0.05) 50%, rgba(0, 166, 81, 0.07) 100%),
+    repeating-linear-gradient(135deg, rgba(0, 166, 81, 0.04) 0px, rgba(0, 166, 81, 0.04) 2px, transparent 2px, transparent 18px);
+}
+
+/* Equipments: subtle “lab grid / circuitry” */
+body[data-page='equipments'] {
+  background-image:
+    radial-gradient(1100px circle at 18% 14%, rgba(0, 51, 153, 0.12), transparent 58%),
+    radial-gradient(1000px circle at 82% 28%, rgba(0, 166, 81, 0.12), transparent 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.40) 0%, rgba(0, 51, 153, 0.03) 55%, rgba(0, 166, 81, 0.03) 100%),
+    repeating-linear-gradient(0deg, rgba(0, 51, 153, 0.03) 0px, rgba(0, 51, 153, 0.03) 1px, transparent 1px, transparent 22px),
+    repeating-linear-gradient(90deg, rgba(0, 166, 81, 0.028) 0px, rgba(0, 166, 81, 0.028) 1px, transparent 1px, transparent 22px),
+    radial-gradient(circle at 40px 40px, rgba(0, 51, 153, 0.05) 0px, rgba(0, 51, 153, 0.05) 1px, transparent 2px);
+  background-size: auto, auto, auto, auto, auto, 80px 80px;
+}
+
+/* Events (base): dotted calendar vibe */
+body[data-page='events'] {
+  background-image:
+    radial-gradient(1000px circle at 20% 15%, rgba(0, 166, 81, 0.14), transparent 60%),
+    radial-gradient(900px circle at 84% 18%, rgba(0, 51, 153, 0.12), transparent 62%),
+    linear-gradient(135deg, rgba(0, 166, 81, 0.06) 0%, rgba(0, 51, 153, 0.05) 55%, rgba(255, 255, 255, 0.22) 100%),
+    radial-gradient(circle at 12px 12px, rgba(0, 51, 153, 0.07) 0px, rgba(0, 51, 153, 0.07) 1px, transparent 2px),
+    radial-gradient(circle at 12px 12px, rgba(0, 166, 81, 0.06) 0px, rgba(0, 166, 81, 0.06) 1px, transparent 2px);
+  background-size: auto, auto, auto, 26px 26px, 26px 26px;
+  background-position: center, center, center, 0 0, 13px 13px;
+}
+
+/* Events: per-type accent (slight shifts only) */
+body[data-page='events'][data-section='fdp'] {
+  background-image:
+    radial-gradient(1000px circle at 22% 16%, rgba(0, 51, 153, 0.14), transparent 62%),
+    radial-gradient(900px circle at 84% 22%, rgba(0, 166, 81, 0.12), transparent 62%),
+    linear-gradient(135deg, rgba(0, 51, 153, 0.06) 0%, rgba(0, 166, 81, 0.05) 55%, rgba(255, 255, 255, 0.22) 100%),
+    radial-gradient(circle at 12px 12px, rgba(0, 51, 153, 0.08) 0px, rgba(0, 51, 153, 0.08) 1px, transparent 2px),
+    radial-gradient(circle at 12px 12px, rgba(0, 166, 81, 0.05) 0px, rgba(0, 166, 81, 0.05) 1px, transparent 2px);
+}
+
+body[data-page='events'][data-section='skilling'] {
+  background-image:
+    radial-gradient(1100px circle at 18% 14%, rgba(0, 166, 81, 0.16), transparent 62%),
+    radial-gradient(900px circle at 82% 18%, rgba(0, 51, 153, 0.10), transparent 62%),
+    linear-gradient(135deg, rgba(0, 166, 81, 0.065) 0%, rgba(0, 51, 153, 0.045) 55%, rgba(255, 255, 255, 0.22) 100%),
+    radial-gradient(circle at 12px 12px, rgba(0, 166, 81, 0.07) 0px, rgba(0, 166, 81, 0.07) 1px, transparent 2px),
+    radial-gradient(circle at 12px 12px, rgba(0, 51, 153, 0.05) 0px, rgba(0, 51, 153, 0.05) 1px, transparent 2px);
+}
+
+body[data-page='events'][data-section='performance'] {
+  background-image:
+    radial-gradient(1000px circle at 20% 15%, rgba(0, 51, 153, 0.13), transparent 62%),
+    radial-gradient(1000px circle at 86% 30%, rgba(0, 166, 81, 0.12), transparent 64%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(0, 51, 153, 0.035) 60%, rgba(0, 166, 81, 0.03) 100%),
+    repeating-linear-gradient(90deg, rgba(0, 51, 153, 0.03) 0px, rgba(0, 51, 153, 0.03) 1px, transparent 1px, transparent 20px),
+    repeating-linear-gradient(0deg, rgba(0, 166, 81, 0.025) 0px, rgba(0, 166, 81, 0.025) 1px, transparent 1px, transparent 20px);
+}
+
+body[data-page='events'][data-section='teachers'] {
+  background-image:
+    radial-gradient(1100px circle at 20% 18%, rgba(0, 166, 81, 0.14), transparent 64%),
+    radial-gradient(900px circle at 82% 18%, rgba(0, 51, 153, 0.12), transparent 62%),
+    linear-gradient(135deg, rgba(0, 166, 81, 0.055) 0%, rgba(0, 51, 153, 0.055) 55%, rgba(255, 255, 255, 0.22) 100%),
+    repeating-linear-gradient(45deg, rgba(0, 51, 153, 0.03) 0px, rgba(0, 51, 153, 0.03) 2px, transparent 2px, transparent 16px);
+}
+
+body[data-page='events'][data-section='conference'] {
+  background-image:
+    radial-gradient(1000px circle at 18% 14%, rgba(0, 51, 153, 0.14), transparent 64%),
+    radial-gradient(1000px circle at 86% 26%, rgba(0, 166, 81, 0.11), transparent 64%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.48) 0%, rgba(0, 51, 153, 0.03) 60%, rgba(0, 166, 81, 0.03) 100%),
+    radial-gradient(circle at 14px 14px, rgba(0, 51, 153, 0.075) 0px, rgba(0, 51, 153, 0.075) 1px, transparent 2px);
+  background-size: auto, auto, auto, 28px 28px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-blue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  /* Modern tight spacing */
+}
+
+/* General Utilities */
+.text-justify {
+  text-align: justify;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--secondary-color);
+}
+
+/* Button Overrides */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
