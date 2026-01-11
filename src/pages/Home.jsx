@@ -93,7 +93,6 @@ const Home = () => {
                 style={{
                   background: 'rgba(255,255,255,0.06)',
                   border: '1px solid rgba(255,255,255,0.12)',
-                  backdropFilter: 'blur(10px)',
                 }}
               >
                 <div className="d-flex align-items-center gap-3 flex-wrap mb-3">
@@ -107,7 +106,7 @@ const Home = () => {
                 </div>
 
                 <h1 className="display-5 fw-bold mb-3">Innovation. Design. Entrepreneurship.</h1>
-                <p className="lead text-white-50 mb-4">
+                <p className="lead text-white-100 mb-4">
                   A hands-on ecosystem for experiential learning, multidisciplinary collaboration, design thinking,
                   prototyping, and entrepreneurship.
                 </p>
@@ -134,7 +133,6 @@ const Home = () => {
                       style={{
                         background: 'rgba(255,255,255,0.06)',
                         border: '1px solid rgba(255,255,255,0.10)',
-                        backdropFilter: 'blur(10px)',
                       }}
                     >
                       <h5 className="fw-bold mb-2">{card.title}</h5>
