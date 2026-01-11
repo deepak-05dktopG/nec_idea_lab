@@ -21,46 +21,27 @@ function AOSManager() {
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
-    const isSmallScreen = window.matchMedia?.('(max-width: 768px)')?.matches;
-
-    const deviceMemory = navigator.deviceMemory ?? 8;
-    const hardwareConcurrency = navigator.hardwareConcurrency ?? 8;
-    const isLowEndDevice = deviceMemory <= 2 || hardwareConcurrency <= 4;
-
-    const connection = navigator.connection;
-    const saveData = Boolean(connection?.saveData);
-    const effectiveType = connection?.effectiveType;
-    const isSlowConnection = effectiveType === 'slow-2g' || effectiveType === '2g';
 
     AOS.init({
       once: true,
       mirror: false,
-      duration: isSmallScreen ? 420 : 700,
+      duration: 650,
       easing: 'ease-out-cubic',
-      offset: isSmallScreen ? 40 : 80,
+      offset: 80,
       delay: 0,
+      anchorPlacement: 'top-bottom',
       disableMutationObserver: true,
-      throttleDelay: isSmallScreen ? 90 : 150,
-      debounceDelay: 120,
-      disable: () => Boolean(prefersReducedMotion) || (isSmallScreen && (saveData || isSlowConnection || isLowEndDevice)),
+      disable: () => Boolean(prefersReducedMotion),
     });
   }, []);
 
   useEffect(() => {
     // Let the new route render first, then refresh AOS positions.
-    let raf1 = 0;
-    let raf2 = 0;
-
-    raf1 = window.requestAnimationFrame(() => {
-      raf2 = window.requestAnimationFrame(() => {
-        AOS.refreshHard();
-      });
+    const rafId = window.requestAnimationFrame(() => {
+      AOS.refresh();
     });
 
-    return () => {
-      window.cancelAnimationFrame(raf1);
-      window.cancelAnimationFrame(raf2);
-    };
+    return () => window.cancelAnimationFrame(rafId);
   }, [location.pathname]);
 
   return null;

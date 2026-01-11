@@ -86,12 +86,15 @@ body {
   --bg-aurora-motion: 1;
 }
 
-/* AOS smoothness on mobile: hint GPU-friendly properties without overriding transforms */
+/* AOS (fresh): keep animations smooth + respect reduced-motion */
+[data-aos] {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 @media (max-width: 768px) {
   [data-aos] {
     will-change: transform, opacity;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
   }
 }
 
