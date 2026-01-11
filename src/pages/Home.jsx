@@ -260,7 +260,7 @@ const Home = () => {
           </div>
 
           {/* Programs */}
-          <div className="row mt-5 align-items-end" data-aos="fade-up">
+          {/* <div className="row mt-5 align-items-end" data-aos="fade-up">
             <div className="col-lg-8">
               <h2 className="fw-bold mb-2">Programs & Events</h2>
               <p className="text-muted mb-0">Explore the Event Calendar and program tracks.</p>
@@ -300,7 +300,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 

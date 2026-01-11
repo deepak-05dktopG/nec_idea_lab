@@ -24,7 +24,7 @@
 
 .top-bar {
   padding: 12px 0;
-  background: linear-gradient(to right, #ebfde3, #84e9ae);
+  background-color: var(--primary-green);
   /* Gradient Light Blue */
 }
 
@@ -69,7 +69,7 @@
 .header-email {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: rgb(228, 227, 227);
 }
 
 .header-email {
