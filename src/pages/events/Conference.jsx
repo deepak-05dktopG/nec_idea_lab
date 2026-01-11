@@ -70,9 +70,7 @@ const Conference = () => {
                 </div>
                 <a
                   className="btn btn-primary"
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=aicte_idea_lab_nec@nandhaengg.org&su=Annual%20Conference%20-%20Enquiry"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:aicte_idea_lab_nec@nandhaengg.org?subject=Annual%20Conference%20-%20Enquiry"
                 >
                   Contact
                 </a>

@@ -43,9 +43,7 @@ const Teachers = () => {
                 </div>
                 <a
                   className="btn btn-success"
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=aicte_idea_lab_nec@nandhaengg.org&su=School%20Teacher%20Awareness%20Program%20-%20Enquiry"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:aicte_idea_lab_nec@nandhaengg.org?subject=School%20Teacher%20Awareness%20Program%20-%20Enquiry"
                 >
                   Contact
                 </a>

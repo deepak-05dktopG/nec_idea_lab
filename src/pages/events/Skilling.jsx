@@ -29,9 +29,7 @@ const Skilling = () => {
                   <p className="text-muted mb-4">{t.focus}</p>
                   <a
                     className={`btn btn-${t.color} w-100`}
-                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=aicte_idea_lab_nec@nandhaengg.org&su=${encodeURIComponent(`Skilling Program Enquiry - ${t.name}`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={`mailto:aicte_idea_lab_nec@nandhaengg.org?subject=${encodeURIComponent(`Skilling Program Enquiry - ${t.name}`)}`}
                   >
                     Enquire
                   </a>

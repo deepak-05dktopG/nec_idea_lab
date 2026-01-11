@@ -29,9 +29,7 @@ const FDP = () => {
                   <div className="text-muted mb-3">Mode: {p.mode}</div>
                   <a
                     className="btn btn-success w-100"
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=aicte_idea_lab_nec@nandhaengg.org&su=FDP%20Registration%20%2F%20Enquiry"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="mailto:aicte_idea_lab_nec@nandhaengg.org?subject=FDP%20Registration%20%2F%20Enquiry"
                   >
                     Enquire / Register
                   </a>

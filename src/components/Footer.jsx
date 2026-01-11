@@ -56,14 +56,12 @@ const Footer = () => {
                         <h6 className="footer-title small mb-3">Get in Touch</h6>
                         <div className="contact-item small mb-2">
                             <i className="bi bi-envelope-fill contact-icon"></i>
-                                                        <a
-                                                            href="https://mail.google.com/mail/?view=cm&fs=1&to=aicte_idea_lab_nec@nandhaengg.org"
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="text-light text-decoration-none opacity-75 hover-opacity-100"
-                                                        >
-                                                            aicte_idea_lab_nec@nandhaengg.org
-                                                        </a>
+                            <a
+                                href="mailto:aicte_idea_lab_nec@nandhaengg.org"
+                                className="text-light text-decoration-none opacity-75 hover-opacity-100"
+                            >
+                                aicte_idea_lab_nec@nandhaengg.org
+                            </a>
                         </div>
                         <div className="contact-item small mb-2">
                             <i className="bi bi-telephone-fill contact-icon"></i>
