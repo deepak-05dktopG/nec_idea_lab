@@ -86,6 +86,22 @@ body {
   --bg-aurora-motion: 1;
 }
 
+/* AOS smoothness on mobile: hint GPU-friendly properties without overriding transforms */
+@media (max-width: 768px) {
+  [data-aos] {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    transition-duration: 1ms !important;
+    transition-delay: 0ms !important;
+  }
+}
+
 /* Full-app background layers (completely new look: texture + aurora) */
 #root {
   min-height: 100vh;
