@@ -30,18 +30,36 @@ function AOSManager() {
       offset: 80,
       delay: 0,
       anchorPlacement: 'top-bottom',
-      disableMutationObserver: true,
+      // In a SPA, pages mount/unmount on navigation; keep this enabled so
+      // new elements get initialized instead of staying hidden.
+      disableMutationObserver: false,
       disable: () => Boolean(prefersReducedMotion),
     });
   }, []);
 
   useEffect(() => {
-    // Let the new route render first, then refresh AOS positions.
-    const rafId = window.requestAnimationFrame(() => {
-      AOS.refresh();
+    // Let the new route render first, then re-scan + re-init all AOS nodes.
+    // refreshHard is important for SPA navigation (new DOM nodes).
+    let raf1 = 0;
+    let raf2 = 0;
+    let timeoutId = 0;
+
+    raf1 = window.requestAnimationFrame(() => {
+      raf2 = window.requestAnimationFrame(() => {
+        AOS.refreshHard();
+      });
     });
 
-    return () => window.cancelAnimationFrame(rafId);
+    // Some mobile browsers/layouts settle a bit later (fonts/images); run once more.
+    timeoutId = window.setTimeout(() => {
+      AOS.refreshHard();
+    }, 200);
+
+    return () => {
+      window.cancelAnimationFrame(raf1);
+      window.cancelAnimationFrame(raf2);
+      window.clearTimeout(timeoutId);
+    };
   }, [location.pathname]);
 
   return null;
