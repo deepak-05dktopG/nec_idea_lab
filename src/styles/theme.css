@@ -54,6 +54,20 @@
   --pattern-confetti: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill-opacity='0.12'%3E%3Cpath d='M18 28l10 6-6 10-10-6z' fill='%23003399'/%3E%3Cpath d='M102 22l12 4-4 12-12-4z' fill='%2300A651'/%3E%3Ccircle cx='38' cy='96' r='5' fill='%23003399'/%3E%3Ccircle cx='112' cy='92' r='4' fill='%2300A651'/%3E%3Cpath d='M70 64l8 8-8 8-8-8z' fill='%23003399'/%3E%3Cpath d='M20 126l14-6 6 14-14 6z' fill='%2300A651'/%3E%3C/g%3E%3C/svg%3E");
 }
 
+/* Avoid horizontal scrollbars (AOS translate + large shadows can overflow on mobile) */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -110,6 +124,15 @@ body {
   background:
     conic-gradient(from 210deg at 40% 40%, rgba(0, 166, 81, 0.55), transparent 25%, rgba(0, 51, 153, 0.45), transparent 58%, rgba(0, 166, 81, 0.50));
   animation: bgFloat 18s ease-in-out infinite;
+}
+
+/* Mobile perf: reduce expensive blurred, animated aurora layer */
+@media (max-width: 768px) {
+  #root::after {
+    animation: none;
+    opacity: 0.55;
+    filter: blur(70px);
+  }
 }
 
 @keyframes bgFloat {

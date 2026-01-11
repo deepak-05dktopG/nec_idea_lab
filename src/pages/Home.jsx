@@ -87,7 +87,7 @@ const Home = () => {
 
         <div className="container py-4 py-lg-5 position-relative">
           <div className="row align-items-center g-4">
-            <div className="col-lg-7" data-aos="fade-right">
+            <div className="col-lg-7" data-aos="fade-up">
               <div
                 className="p-4 p-lg-5 rounded-4"
                 style={{
@@ -125,7 +125,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="col-lg-5" data-aos="fade-left" data-aos-delay="100">
+            <div className="col-lg-5" data-aos="fade-up" data-aos-delay="100">
               <div className="row g-3">
                 {quickCards.map((card, idx) => (
                   <div className="col-12" key={card.title} data-aos="fade-up" data-aos-delay={150 + idx * 100}>
@@ -187,7 +187,14 @@ const Home = () => {
                       <span className={`badge text-bg-${f.color}`}>{f.badge}</span>
                       <i className={`bi ${f.icon} text-${f.color}`} style={{ fontSize: 22 }}></i>
                     </div>
-                    <img src={f.image} alt={f.title} className="img-fluid mb-3 rounded-3 w-100" style={{ height: 160, objectFit: 'cover' }} />
+                    <img
+                      src={f.image}
+                      alt={f.title}
+                      className="img-fluid mb-3 rounded-3 w-100"
+                      style={{ height: 160, objectFit: 'cover' }}
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <h5 className="fw-bold">{f.title}</h5>
                     <p className="text-muted mb-0">{f.text}</p>
                   </div>
@@ -198,10 +205,17 @@ const Home = () => {
 
           {/* About Snapshot */}
           <div className="row g-4 mt-4">
-            <div className="col-lg-6" data-aos="fade-right">
+            <div className="col-lg-6" data-aos="fade-up">
               <div className="card border-0 shadow-sm h-100">
                 <div className="card-body p-4 p-lg-5">
-                  <img src={necCampus} alt="NEC Campus" className="img-fluid rounded-3 mb-4 w-100" style={{ height: 200, objectFit: 'cover' }} />
+                  <img
+                    src={necCampus}
+                    alt="NEC Campus"
+                    className="img-fluid rounded-3 mb-4 w-100"
+                    style={{ height: 200, objectFit: 'cover' }}
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <div className="d-flex align-items-center gap-2 mb-2">
                     <img src={necLogo} alt="NEC" style={{ height: 34, width: 'auto' }} />
                     <span className="badge text-bg-light text-dark">NEC</span>
@@ -216,10 +230,17 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <div className="card border-0 shadow-sm h-100">
                 <div className="card-body p-4 p-lg-5">
-                  <img src={ideaLabInterior} alt="IDEA Lab" className="img-fluid rounded-3 mb-4 w-100" style={{ height: 200, objectFit: 'cover' }} />
+                  <img
+                    src={ideaLabInterior}
+                    alt="IDEA Lab"
+                    className="img-fluid rounded-3 mb-4 w-100"
+                    style={{ height: 200, objectFit: 'cover' }}
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <div className="d-flex align-items-center gap-2 mb-2">
                     <img src={ideaLabLogo} alt="IDEA Lab" style={{ height: 34, width: 'auto' }} />
                     <span className="badge text-bg-success">AICTE IDEA Lab</span>
@@ -291,7 +312,7 @@ const Home = () => {
               <h2 className="fw-bold mb-2">Get in touch</h2>
               <p className="text-muted mb-0">Contact us for lab access, collaborations, FDPs, or student project support.</p>
             </div>
-            <div className="col-lg-5" data-aos="fade-left" data-aos-delay="100">
+            <div className="col-lg-5" data-aos="fade-up" data-aos-delay="100">
               <div className="card border-0 shadow-sm">
                 <div className="card-body p-4">
                   <div className="d-flex align-items-start justify-content-between gap-3">

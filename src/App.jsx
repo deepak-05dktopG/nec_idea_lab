@@ -21,19 +21,19 @@ function AOSManager() {
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
+    const isSmallScreen = window.matchMedia?.('(max-width: 768px)')?.matches;
 
     AOS.init({
       once: true,
-      duration: 700,
+      duration: isSmallScreen ? 520 : 700,
       easing: 'ease-out-cubic',
-      offset: 80,
+      offset: isSmallScreen ? 50 : 80,
       delay: 0,
+      disableMutationObserver: true,
+      throttleDelay: 180,
+      debounceDelay: 80,
       disable: () => Boolean(prefersReducedMotion),
     });
-
-    return () => {
-      AOS.refreshHard();
-    };
   }, []);
 
   useEffect(() => {

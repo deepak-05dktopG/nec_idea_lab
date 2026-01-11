@@ -71,6 +71,8 @@ const Equipments = () => {
                         alt={c.name}
                         className="rounded-3"
                         style={{ width: '100%', maxWidth: 300, height: 240, objectFit: 'cover' }}
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <div className="flex-grow-1">

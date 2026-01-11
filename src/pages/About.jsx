@@ -18,7 +18,7 @@ const About = () => {
         </div>
 
         <div className="row g-4 mb-5">
-          <div className="col-lg-6" data-aos="fade-right">
+          <div className="col-lg-6" data-aos="fade-up">
             <div className="card border-0 shadow-sm h-100">
               <div className="card-body p-4 p-lg-5">
                 <img src={necCampus} alt="NEC Campus" className="img-fluid rounded-3 mb-4 w-100" style={{ height: 240, objectFit: 'cover' }} />
@@ -44,7 +44,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div className="card border-0 shadow-sm h-100">
               <div className="card-body p-4 p-lg-5">
                 <img src={innovationEcosystem} alt="Innovation Ecosystem" className="img-fluid rounded-3 mb-4 w-100" style={{ height: 240, objectFit: 'cover' }} />

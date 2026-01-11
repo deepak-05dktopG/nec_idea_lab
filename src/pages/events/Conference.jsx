@@ -27,7 +27,7 @@ const Conference = () => {
         </div>
 
         <div className="row g-4 mb-4">
-          <div className="col-lg-6" data-aos="fade-right">
+          <div className="col-lg-6" data-aos="fade-up">
             <div className="card border-0 shadow-sm h-100">
               <div className="card-body p-4">
                 <div className="d-flex gap-2 flex-wrap mb-3">
@@ -41,7 +41,7 @@ const Conference = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div className="card border-0 shadow-sm h-100">
               <div className="card-body p-4">
                 <h5 className="fw-bold mb-3">Tracks</h5>
