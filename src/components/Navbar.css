@@ -24,20 +24,72 @@
 
 .top-bar {
   padding: 12px 0;
-  background-color: var(--primary-green);
-  /* Gradient Light Blue */
+  background:
+    radial-gradient(1100px circle at 15% 25%, rgba(0, 166, 81, 0.35), transparent 55%),
+    radial-gradient(900px circle at 80% 20%, rgba(0, 51, 153, 0.38), transparent 58%),
+    radial-gradient(700px circle at 55% 70%, rgba(255, 255, 255, 0.10), transparent 60%),
+    linear-gradient(90deg, #021b46 0%, #003e8f 45%, #00A651 100%);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Unique overlay: subtle grid + diagonal sheen */
+.top-bar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    /* grid */
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0px, rgba(255, 255, 255, 0.06) 1px, transparent 1px, transparent 44px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 44px),
+    /* sheen */
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.16) 30%, transparent 60%);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.top-bar > .container-fluid {
+  position: relative;
+  z-index: 1;
+}
+
+/* Keep top header content readable on darker gradient */
+.top-bar .college-name,
+.top-bar .autonomous-tag {
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+}
+
+.top-bar .header-address {
+  color: rgba(255, 255, 255, 0.82);
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+.top-bar .header-email {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+/* Center cluster: logo next to the full info stack */
+.header-center-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
 .logo-left img {
   height: 85px;
   width: auto;
   transition: transform 0.3s ease;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.25));
 }
 
 .logo-left:hover img {
@@ -45,14 +97,13 @@
 }
 
 .header-center {
-  text-align: center;
-  flex-grow: 1;
-  padding: 0 15px;
+  text-align: left;
+  padding: 0;
 }
 
 .college-name {
   color: var(--deep-blue);
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-family: var(--font-heading, 'Inter', 'Segoe UI', sans-serif);
   font-weight: 800;
   font-size: 1.7rem;
   text-transform: uppercase;
@@ -75,6 +126,42 @@
 .header-email {
   color: var(--deep-blue);
   font-weight: 600;
+}
+
+/* Chips for address + email */
+.header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.header-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+}
+
+.header-chip .bi {
+  font-size: 1.05em;
+}
+
+.header-chip-link {
+  text-decoration: none;
+}
+
+.header-chip-link:hover {
+  transform: translateY(-1px);
+  background: rgba(0, 0, 0, 0.24);
 }
 
 .logo-right {
@@ -371,6 +458,15 @@
     text-align: center;
     gap: 15px;
     padding-bottom: 10px;
+  }
+
+  .header-center-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-center {
+    text-align: center;
   }
 
   .logo-left img {

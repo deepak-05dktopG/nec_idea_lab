@@ -29,23 +29,25 @@ const Navbar = () => {
                 <div className="top-bar">
                     <div className="container-fluid px-4 px-xl-5">
                         <div className="header-container">
-                            {/* Left: NEC Logo */}
-                            <div className="logo-left">
-                                <a href="https://nandhaengg.org/" target="_blank" rel="noopener noreferrer">
-                                    <img src={necLogo} alt="Nandha Engineering College" />
-                                </a>
-                            </div>
+                            <div className="header-center-group">
+                                {/* NEC Logo (now beside the full center content) */}
+                                <div className="logo-left">
+                                    <a href="https://nandhaengg.org/" target="_blank" rel="noopener noreferrer">
+                                        <img src={necLogo} alt="Nandha Engineering College" />
+                                    </a>
+                                </div>
 
-                            {/* Center: Info Stack */}
-                            <div className="header-center">
-                                <div className="college-name">
-                                    NANDHA ENGINEERING COLLEGE <span className="autonomous-tag">(AUTONOMOUS)</span>
-                                </div>
-                                <div className="header-address">
-                                    Perundurai, Erode - 638 052, Tamilnadu, India
-                                </div>
-                                <div className="header-email">
-                                        aicte_idea_lab_nec@nandhaengg.org
+                                {/* Center: Info Stack */}
+                                <div className="header-center text-center">
+                                    <div className="college-name">
+                                        NANDHA ENGINEERING COLLEGE <span className="autonomous-tag">(AUTONOMOUS)</span>
+                                    </div>
+                                    <div className="header-address">
+                                        Perundurai, Erode - 638 052, Tamilnadu, India
+                                    </div>
+                                    <div className="header-email ">
+                                            aicte_idea_lab_nec@nandhaengg.org
+                                    </div>
                                 </div>
                             </div>
 

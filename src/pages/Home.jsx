@@ -151,10 +151,13 @@ const Home = () => {
                       <div className="fw-semibold">aicte_idea_lab_nec@nandhaengg.org</div>
                     </div>
                     <a
-                      className="btn btn-success"
+                      className="btn btn-success btn-icon-only"
                       href="mailto:aicte_idea_lab_nec@nandhaengg.org"
+                      aria-label="Mail"
+                      title="Mail"
                     >
-                      Mail
+                      <i className="bi bi-envelope-at" aria-hidden="true"></i>
+                      <span className="visually-hidden">Mail</span>
                     </a>
                   </div>
                 </div>
@@ -319,10 +322,13 @@ const Home = () => {
                       <div className="text-muted">NANDHA ENGINEERING COLLEGE, ERODE – 638052.</div>
                     </div>
                     <a
-                      className="btn btn-success"
+                      className="btn btn-success btn-icon-only"
                       href="mailto:aicte_idea_lab_nec@nandhaengg.org"
+                      aria-label="Mail"
+                      title="Mail"
                     >
-                      Mail
+                      <i className="bi bi-envelope-at" aria-hidden="true"></i>
+                      <span className="visually-hidden">Mail</span>
                     </a>
                   </div>
                 </div>
