@@ -72,7 +72,7 @@ const Implementation = () => {
       department: 'Mechanical Engineering',
       phone: '8072925263', 
       email: '24me006@nandhaengg.org', 
-      photo: '/dist/assets/Mr. S. S. Bharani .png' 
+      photo: './dist/assets/Mr. S. S. Bharani .png' 
     },
     { 
       name: 'Ms. N. Prithika', 
@@ -80,7 +80,7 @@ const Implementation = () => {
       department: 'Electrical and Electronics Engineering',
       phone: '8072456750', 
       email: 'pritthikanatarajan@gmail.com', 
-      photo: '/dist/assets/Ms. N. Prithika.png' 
+      photo: './dist/assets/Ms. N. Prithika.png' 
     },
     { 
       name: 'Mr. A. V. Hariharan', 
@@ -88,7 +88,7 @@ const Implementation = () => {
       department: 'Electronics and Communication Engineering',
       phone: '9843325345', 
       email: 'hariharanav102006@gmail.com', 
-      photo: '/dist/assets/Mr. A. V. Hariharan.png' 
+      photo: './dist/assets/Mr. A. V. Hariharan.png' 
     },
     { 
       name: 'Mr. T. Madhan Prasath', 
@@ -104,7 +104,7 @@ const Implementation = () => {
       department: 'Computer Science and Engineering (Cyber Security)',
       phone: '', 
       email: '', 
-      photo: '/dist/assets/Mr. S. Raghavan.png' 
+      photo: './dist/assets/Mr. S. Raghavan.png' 
     },
   ];
 
