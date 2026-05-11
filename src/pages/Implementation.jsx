@@ -1,5 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import bharaniPhoto from '../assets/images/Mr. S. S. Bharani .png';
+import prithikaPhoto from '../assets/images/Ms. N. Prithika.png';
+import hariharanPhoto from '../assets/images/Mr. A. V. Hariharan.png';
+import raghavanPhoto from '../assets/images/Mr. S. Raghavan.png';
 
 const CardPhoto = ({ src, alt, fallbackText, height = 260, fit = 'cover' }) => {
   if (!src) {
@@ -31,80 +35,80 @@ const CardPhoto = ({ src, alt, fallbackText, height = 260, fit = 'cover' }) => {
 
 const Implementation = () => {
   const ambassadors = [
-    { 
-      name: 'Mr. M. Sengottaiyan', 
+    {
+      name: 'Mr. M. Sengottaiyan',
       role: 'Assistant Professor',
       department: 'Mechanical Engineering',
-      phone: '9003704787', 
-      email: 'sengottaiyan.malaisamy@nandhaengg.org', 
-      photo: 'https://nandhaengg.org/wp-content/uploads/2025/04/NEC-Mech-SEngottaiyan.jpg' 
+      phone: '9003704787',
+      email: 'sengottaiyan.malaisamy@nandhaengg.org',
+      photo: 'https://nandhaengg.org/wp-content/uploads/2025/04/NEC-Mech-SEngottaiyan.jpg'
     },
-    { 
-      name: 'Mr. V. Ravichandran', 
+    {
+      name: 'Mr. V. Ravichandran',
       role: 'Assistant Professor',
       department: 'Electrical and Electronics Engineering',
-      phone: '9842483761', 
-      email: 'ravichandran.v@nandhaengg.org', 
-      photo: 'https://nandhaengg.org/wp-content/uploads/2025/04/NEC-EEE-RAvichandran.jpg' 
+      phone: '9842483761',
+      email: 'ravichandran.v@nandhaengg.org',
+      photo: 'https://nandhaengg.org/wp-content/uploads/2025/04/NEC-EEE-RAvichandran.jpg'
     },
-    { 
-      name: 'Mr. C. Prabhu', 
+    {
+      name: 'Mr. C. Prabhu',
       role: 'Assistant Professor',
       department: 'Electronics and Communication Engineering',
-      phone: '9489366575', 
-      email: 'prabhu.ece2022@nandhaengg.org', 
-      photo: 'https://nandhaengg.org/wp-content/uploads/2025/04/NEC-CSE-Prabhu.jpg' 
+      phone: '9489366575',
+      email: 'prabhu.ece2022@nandhaengg.org',
+      photo: 'https://nandhaengg.org/wp-content/uploads/2025/04/NEC-CSE-Prabhu.jpg'
     },
-    { 
-      name: 'Mr. A. Satheesh Kumar', 
+    {
+      name: 'Mr. A. Satheesh Kumar',
       role: 'Assistant Professor',
       department: 'Computer Science and Engineering',
-      phone: '9865899677', 
-      email: 'satheesh.a@nandhaengg.org', 
-      photo: 'https://nandhaengg.org/wp-content/uploads/2025/03/200-x-200-Faculty-Photo-NEC-CSE-Sathishkumar.jpg' 
+      phone: '9865899677',
+      email: 'satheesh.a@nandhaengg.org',
+      photo: 'https://nandhaengg.org/wp-content/uploads/2025/03/200-x-200-Faculty-Photo-NEC-CSE-Sathishkumar.jpg'
     },
   ];
 
   const studentAmbassadors = [
-    { 
-      name: 'Mr. S. S. Bharani', 
+    {
+      name: 'Mr. S. S. Bharani',
       year: 'II Year',
       department: 'Mechanical Engineering',
-      phone: '8072925263', 
-      email: '24me006@nandhaengg.org', 
-      photo: './dist/assets/Mr. S. S. Bharani .png' 
+      phone: '8072925263',
+      email: '24me006@nandhaengg.org',
+      photo: bharaniPhoto
     },
-    { 
-      name: 'Ms. N. Prithika', 
+    {
+      name: 'Ms. N. Prithika',
       year: 'III Year',
       department: 'Electrical and Electronics Engineering',
-      phone: '8072456750', 
-      email: 'pritthikanatarajan@gmail.com', 
-      photo: './dist/assets/Ms. N. Prithika.png' 
+      phone: '8072456750',
+      email: 'pritthikanatarajan@gmail.com',
+      photo: prithikaPhoto
     },
-    { 
-      name: 'Mr. A. V. Hariharan', 
+    {
+      name: 'Mr. A. V. Hariharan',
       year: 'III Year',
       department: 'Electronics and Communication Engineering',
-      phone: '9843325345', 
-      email: 'hariharanav102006@gmail.com', 
-      photo: './dist/assets/Mr. A. V. Hariharan.png' 
+      phone: '9843325345',
+      email: 'hariharanav102006@gmail.com',
+      photo: hariharanPhoto
     },
-    { 
-      name: 'Mr. T. Madhan Prasath', 
+    {
+      name: 'Mr. T. Madhan Prasath',
       year: 'II Year',
       department: 'Computer Science and Engineering',
-      phone: '', 
-      email: '', 
-      photo: '' 
+      phone: '',
+      email: '',
+      photo: ''
     },
-    { 
-      name: 'Mr. S. Raghavan', 
+    {
+      name: 'Mr. S. Raghavan',
       year: 'III Year',
       department: 'Computer Science and Engineering (Cyber Security)',
-      phone: '', 
-      email: '', 
-      photo: './dist/assets/Mr. S. Raghavan.png' 
+      phone: '',
+      email: '',
+      photo: raghavanPhoto
     },
   ];
 
@@ -133,7 +137,7 @@ const Implementation = () => {
                   <div className="fw-bold fs-5">{m.name}</div>
                   <div className="text-success small mb-2 fw-medium">{m.role}</div>
                   <div className="text-muted small mb-3 flex-grow-1">{m.department}</div>
-                  
+
                   <div className="text-muted small mb-1">
                     <i className="bi bi-telephone me-2"></i>{m.phone}
                   </div>
@@ -189,7 +193,7 @@ const Implementation = () => {
                   <div className="fw-bold fs-5">{m.name}</div>
                   <div className="text-success small mb-2 fw-medium">{m.year}</div>
                   <div className="text-muted small mb-3 flex-grow-1">{m.department}</div>
-                  
+
                   {m.phone && (
                     <div className="text-muted small mb-1">
                       <i className="bi bi-telephone me-2"></i>{m.phone}
